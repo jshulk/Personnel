@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Router</title>
+  </head>
+  <body>
+
+    <button type="button" id="home" name="button">Home</button>
+    <button type="button" id="about" name="button">About</button>
+
+    <script src="/dist/router.bundle.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var homeButton = document.getElementById("home");
+        var aboutButton = document.getElementById('about');
+        var router = new Personnel();
+
+        homeButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          router.go("/home");
+        });
+
+        aboutButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          router.go("/about");
+        });
+
+        router.define("/home", function () {
+          console.log('home route');
+        });
+        router.define("/about", function () {
+          console.log('about page');
+        });
+    </script>
+  </body>
+</html>
