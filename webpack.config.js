@@ -13,6 +13,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     port: 3001,
-    contentBase: path.resolve(__dirname, "examples")
+    contentBase: path.resolve(__dirname, "examples"),
+    historyApiFallback: true
   }
 };

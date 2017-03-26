@@ -14,6 +14,7 @@ class Personnel {
 
   start () {
     window.addEventListener("popstate", this._onRouteChange);
+    this._onRouteChange();
   }
 
   _onRouteChange () {
